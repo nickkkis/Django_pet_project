@@ -1,0 +1,52 @@
+  	<section>
+  		<div class="container">
+  			<h1 class="text-3">ПАКЕТЫ УСЛУГ</h1>
+  			<div class="row justify-content-center">
+  				<div class="card product_card" style="width: 18rem; background-color: #cd7f32;">
+				  <div class="card-body">
+				    <h5 class="card-title">Arabica</h5>
+				    <p class="card-text">Смесь из двух сортов арабики из Мексики и Бразилии. Ароматная и насыщенная, с оттенками орехов, молочного шоколада и мёда. Отлично подходит для приготовления в кофемашине и джезве. Вкусовой баланс прослеживается на протяжении всего глотка, а послевкусие долгое, приятное, терпкое.</p>
+				    <h3>{{ pc_1 }} тенге.</h3>
+				  </div>
+				</div>
+				<div class="card product_card" style="width: 18rem; background-color: #c0c0c0;">
+				  <div class="card-body">
+				    <h5 class="card-title">Espresso Crema</h5>
+				    <p class="card-text">Плотный насыщенный кофе. Имеет ярко - выраженную горчинку. Во вкусе горький шоколад, какао, корица, фундук, гвоздика. Послевкусие какао, корица.</p>
+				    <h3>{{ pc_2 }} тенге.</h3>
+				  </div>
+				</div>
+				<div class="card product_card" style="width: 18rem; background-color: #ffd700;">
+				  <div class="card-body">
+				    <h5 class="card-title">Espresso Italiano 80/20</h5>
+				    <p class="card-text">Соответствует всем стандартам лучшего итальянского бленда. Средняя обжарка придает гармоничный вкус, обладает низкой кислотностью, выраженным стойким ароматом с шоколадно-кремовыми оттенками. Купаж зерен Центральной Америки и Азии. Кофе подходит для приготовления напитков с молоком и классическим эспрессо. В оттенках аромата найдёте свежий хлеб, орехи, горький шоколад, цитрус. </p>
+				    <h3>{{ pc_3 }} тенге.</h3>
+				  </div>
+				</div>
+  			</div>
+  		</div>
+  	</section>
+  	<!-- Таблица -->
+  	<section>
+  		<div class="container">
+  			<h1 class="text-3">Цены на услуги</h1>
+  			<table class="table table_one">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">Услуга</th>
+			      <th scope="col">Старая цена</th>
+			      <th scope="col">Новая цена</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  {% for obj in price_table %}
+			    <tr>
+			      <td>{{ obj.pt_title }}</td>
+			      <td><del>{{ obj.pt_old_price }}</del></td>
+			      <td>{{ obj.pt_new_price }}</td>
+			    </tr>
+			  {% endfor %}
+			  </tbody>
+			</table>
+  		</div>
+  	</section>
